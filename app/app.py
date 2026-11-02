@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello EX.CO - Automated via CI/CD!"
+    return "Hello EX.CO - Full GitOps Pipeline is Live!"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
