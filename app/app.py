@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello EX.CO"
+    return "Hello EX.CO - Automated via CI/CD!"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
