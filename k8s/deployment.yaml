@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: exco-app
-        image: ofekh/exco-app:92f5f5de63b753ebda413a1fc8731c47653dc712
+        image: ofekh/exco-app:2c8fe5b220569942cde1f4f9c0b386cac6a5023c
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
