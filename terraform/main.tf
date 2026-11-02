@@ -1,0 +1,22 @@
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.25"
+    }
+  }
+}
+
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+
+resource "kubernetes_namespace" "exco_env" {
+  metadata {
+    name = var.namespace_name
+    labels = {
+      environment = var.environment
+      managed_by  = "terraform"
+    }
+  }
+}

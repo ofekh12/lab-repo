@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exco-deployment
+  namespace: exco-prod
+  labels:
+    app: exco-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exco-service
+  template:
+    metadata:
+      labels:
+        app: exco-service
+    spec:
+      containers:
+      - name: exco-app
+        image: exco-app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
